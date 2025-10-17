@@ -36,7 +36,7 @@ class AlunoController extends Controller
         Aluno::create($request->all());
 
         return redirect()->route('alunos.index')
-                         ->with('success', 'Aluno cadastrado com sucesso.');
+                        ->with('success', 'Aluno cadastrado com sucesso.');
     }
 
     public function show(Aluno $aluno)
@@ -66,7 +66,7 @@ class AlunoController extends Controller
         $aluno->update($request->all());
 
         return redirect()->route('alunos.index')
-                         ->with('success', 'Dados do aluno atualizados com sucesso.');
+                        ->with('success', 'Dados do aluno atualizados com sucesso.');
     }
 
     public function destroy(Aluno $aluno)
@@ -74,6 +74,6 @@ class AlunoController extends Controller
         $aluno->delete();
 
         return redirect()->route('alunos.index')
-                         ->with('success', 'Aluno excluído com sucesso.');
+                        ->with('success', 'Aluno excluído com sucesso.');
     }
 }
