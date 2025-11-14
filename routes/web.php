@@ -7,5 +7,6 @@ Route::get('/', function () {
 });
 
 Route::get('/ola-mundo/', function(){
-        return view('exercicios.index');
+        $exercico = Exercicio::all();
+        return view('exercicios.index') ->with('exercios',$exercico);
 });
